@@ -509,7 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48f3ffaff71134c43995841c8865287f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrustForce: 1000
+  thrustForce: 50
   rotationSpeed: 100
 --- !u!135 &135316481781702046
 SphereCollider:

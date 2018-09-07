@@ -26,11 +26,10 @@ public class Rocket : MonoBehaviour {
 
     private void Thrust()
     {
-        float thrustThisFrame = thrustForce * Time.deltaTime;
 
         if (Input.GetKey(KeyCode.Space))
         {
-            rigidBody.AddRelativeForce(Vector3.up * thrustThisFrame);
+            rigidBody.AddRelativeForce(Vector3.up * thrustForce);
 
             if (!audioSource.isPlaying) // so it doesn't layer
             {
@@ -52,14 +51,30 @@ public class Rocket : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward * Time.deltaTime * rotationThisFrame);
+            transform.Rotate(Vector3.forward * rotationThisFrame);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(Vector3.back * Time.deltaTime * rotationThisFrame);
+            transform.Rotate(Vector3.back * rotationThisFrame);
         }
 
         rigidBody.freezeRotation = false; // resume physics control 
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                print ("Ok");
+                break;
+            case "Unfriendly":
+                print("Dead");
+                break;
+            default:
+                print("Probably Dead");
+                break;
+        }
     }
 }
  
