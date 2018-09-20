@@ -9,9 +9,18 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Level 1.unity
+    path: Assets/Levels/Level 1.unity
     guid: 28f9c62e0e6bd4f99b056dfd3c7e6ed4
-  - enabled: 1
-    path: Assets/Level 2.unity
+  - enabled: 0
+    path: Assets/__DELETED_GUID_Trash/53b917c38199d4c9090a2b81b88591fa
     guid: 53b917c38199d4c9090a2b81b88591fa
+  - enabled: 1
+    path: Assets/Levels/Level 2.unity
+    guid: cfc48ca3c27a748528538b0fe7bf44a6
+  - enabled: 1
+    path: Assets/Levels/Level 3.unity
+    guid: 7aa84c368b74442bb9c4b9d3fb9f503d
+  - enabled: 1
+    path: Assets/Levels/Level 4.unity
+    guid: 135dcf199627f476485ba24a39aa69cd
   m_configObjects: {}
